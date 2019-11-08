@@ -9,6 +9,4 @@ MoviesRouter.get('/edit/:id', (req, res) =>{
         .then((singleMovie) =>{
             res.
         })
-
-
 })
