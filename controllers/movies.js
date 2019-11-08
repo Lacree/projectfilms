@@ -20,7 +20,7 @@ movieRouter.get('/:id', (req, res) => {
         })
 })
 
-//update
+//updateMovie
 
 movieRouter.put('/:id', (req, res) => {
     MovieApi.updateMovies(req.params.id, req.body)

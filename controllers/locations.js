@@ -4,22 +4,13 @@ const LocationApi = require('../models/Locations.js')
 
 const locationRouter = express.Router()
 
-// movieRouter.get('/edit/:id', (req, res) => {
-//     MovieApi.getOneMovie(req.params.id)
-//         .then((singleMovie) => {
-//           res.json('editMovieForm', singleMovie)
-//         })
-// })
 
-// movieRouter.get('/new', (req, res) => {
-//     res.json('createMovieForm')
-// })
 
 //getAll
 locationRouter.get('/', (req, res) => {
     LocationApi.getAllLocations()
-        .then((getAllLocations) => {
-            res.json(getAllLocations)
+        .then((allLocations) => {
+            res.json(allLocations)
         })
 })
 
@@ -27,7 +18,6 @@ locationRouter.get('/', (req, res) => {
 locationRouter.get('/:id', (req, res) => {
     LocationApi.getOneLocation(req.params.id)
         .then((singleLocation) => {
-
             res.json(singleLocation)
         })
 })
