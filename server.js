@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 
 const { movieRouter } = require('./controllers/movies.js')
+const { reviewRouter} = require('./controllers/reviews.js')
+const { locationRouter} = require('./controllers/locations.js')
+
 app.use(express.urlencoded({ extended: true }))
 
 
@@ -10,6 +13,8 @@ app.use(express.json())
 app.use(express.static(`${__dirname}/client/build`))
 
 app.use('/api/movie', movieRouter)
+app.use('/api/review', reviewRouter)
+app.use('/api/location', locationRouter)
 
 app.get('/*', (req, res) => {
     res.sendFile(`${__dirname}/client/build/index.html`)
