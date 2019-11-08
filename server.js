@@ -1,16 +1,15 @@
-
 const express = require('express')
 const app = express()
 
-const { templateRouter } = require('./controllers/template.js')
-app.use(express.urlencoded({extended: true}))
+const { movieRouter } = require('./controllers/movies.js')
+app.use(express.urlencoded({ extended: true }))
 
 
 app.use(express.json())
 
 app.use(express.static(`${__dirname}/client/build`))
 
-app.use('/api/Movies', MoviesRouter)
+app.use('/api/movie', movieRouter)
 
 app.get('/*', (req, res) => {
     res.sendFile(`${__dirname}/client/build/index.html`)
