@@ -1,6 +1,6 @@
 const express = require('express')
 
-const LocationsApi = require('../models/Locations.js')
+const LocationApi = require('../models/Locations.js')
 
 const locationRouter = express.Router()
 

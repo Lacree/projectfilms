@@ -15,7 +15,7 @@ const getAllMovies = () => {
 
 //getOneMovie
 const getOneMovie = (id) => {
-    return MovieCollection.findById(id)
+    return MoviesCollection.findById(id)
 }
 
 //createMovie

@@ -4,17 +4,6 @@ const MovieApi = require('../models/Movies.js')
 
 const movieRouter = express.Router()
 
-// movieRouter.get('/edit/:id', (req, res) => {
-//     MovieApi.getOneMovie(req.params.id)
-//         .then((singleMovie) => {
-//           res.json('editMovieForm', singleMovie)
-//         })
-// })
-
-// movieRouter.get('/new', (req, res) => {
-//     res.json('createMovieForm')
-// })
-
 //getAll
 movieRouter.get('/', (req, res) => {
     MovieApi.getAllMovies()
@@ -27,7 +16,6 @@ movieRouter.get('/', (req, res) => {
 movieRouter.get('/:id', (req, res) => {
     MovieApi.getOneMovie(req.params.id)
         .then((singleMovie) => {
-
             res.json(singleMovie)
         })
 })
@@ -35,7 +23,7 @@ movieRouter.get('/:id', (req, res) => {
 //update
 
 movieRouter.put('/:id', (req, res) => {
-    MovieApi.updateMovie(req.params.id, req.body)
+    MovieApi.updateMovies(req.params.id, req.body)
         .then((updatedMovie) => {
             res.json(updatedMovie)
         })
