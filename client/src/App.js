@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Movies from './components/Movies';
 import Header from './components/Header';
+import Reviews from './components/Reviews';
+
 
 function App() {
   return (
