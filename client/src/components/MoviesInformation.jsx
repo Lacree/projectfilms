@@ -8,7 +8,7 @@ export class MoviesInformation extends Component {
     }
 
     deleteMovie = () =>{
-        axios.delete('/api/movie' + this.props.maych.params.id)
+        axios.delete('/api/movie/' + this.props.maych.params.id)
             .then((response) =>{
                 this.setState({ deleted: true})
                 console.log(response)
@@ -37,7 +37,7 @@ export class MoviesInformation extends Component {
                     <h5>name: {this.state.movie.name}</h5>
                     <h5>genre: {this.state.movie.genre}</h5>
                     <h5>releaseYear: {this.state.movie.releaseYear}</h5>
-                   
+                    
                     <button onClick={this.deleteMovie}>Deleted</button>
                 </div>
             )
