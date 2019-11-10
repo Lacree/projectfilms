@@ -11,6 +11,9 @@ export default class Header extends Component {
                 <button>
                     <Link to="/locations"> Locations</Link>
                 </button>
+                <button>
+                    <Link to="/reviews"> Reviews</Link>
+                </button>
             
 
             </div>
