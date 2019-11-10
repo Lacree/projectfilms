@@ -8,6 +8,9 @@ export default class Header extends Component {
                 <button>
                     <Link to="/movies"> Movies</Link>
                 </button>
+                <button>
+                    <Link to="/locations"> Locations</Link>
+                </button>
             
 
             </div>
