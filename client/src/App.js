@@ -26,6 +26,7 @@ function App() {
           <Route exact path="/locations" components={Locations} />
           <Route exact path="/locations/:id" components={LocationsInformation} />
           <Route exact path="/reviews" components={ReviewsInformation} />
+          <Route exact path="/reviews" components={Reviews} />
           
         
           
