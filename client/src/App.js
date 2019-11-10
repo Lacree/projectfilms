@@ -2,10 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Movies from './components/Movies';
-import Location from './components/Locations';
+import Locations from './components/Locations';
 import Reviews from './components/Reviews';
 import Header from './components/Header';
-import Locations from './components/Locations';
+import LocationsInformation from "./components/LocationsInformation";
+
+
 
 
 
