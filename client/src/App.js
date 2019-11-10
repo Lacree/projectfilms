@@ -5,6 +5,7 @@ import Movies from './components/Movies';
 import Location from './components/Locations';
 import Reviews from './components/Reviews';
 import Header from './components/Header';
+import Locations from './components/Locations';
 
 
 
@@ -16,6 +17,14 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/movies" components={Movies} />
+          <Route exact path="/movies/:id" components={MoviesInformation} />
+          <Route exact path="/locations" components={Locations} />
+          <Route exact path="/locations/:id" components={LocationsInformation} />
+          <Route exact path="/reviews" components={Reviews} />
+          
+        
+          
+
           
           
 
