@@ -22,8 +22,9 @@ export default class Reviews extends Component {
                     return(
                         <div key={review._id}>
                             <Link to={'/reviews' + review._id}><h2>{review.name}</h2></Link>
+                            </div>
                     )
-                    </div>
+                   
                 })}
             </div>
         )
