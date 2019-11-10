@@ -6,6 +6,8 @@ import Locations from './components/Locations';
 import Reviews from './components/Reviews';
 import Header from './components/Header';
 import LocationsInformation from "./components/LocationsInformation";
+import MoviesInformation from "./components/MoviesInformation";
+
 
 
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
-export class MoviesInformation extends Component {
+export default class MoviesInformation extends Component {
     state={
         movie: {}
     }
