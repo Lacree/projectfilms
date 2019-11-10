@@ -1,8 +1,8 @@
 const mongoose = require('./connections.js')
 
 const ReviewsSchema = new mongoose.Schema({
-   Stars: Number,
-   Review: String
+   stars: Number,
+   review: String
 })
 
 const ReviewsCollection = mongoose.model('review', ReviewsSchema)
