@@ -7,6 +7,7 @@ import Reviews from './components/Reviews';
 import Header from './components/Header';
 import LocationsInformation from "./components/LocationsInformation";
 import MoviesInformation from "./components/MoviesInformation";
+import ReviewsInformation from "./components/ReviewsInformation";
 
 
 
@@ -24,7 +25,7 @@ function App() {
           <Route exact path="/movies/:id" components={MoviesInformation} />
           <Route exact path="/locations" components={Locations} />
           <Route exact path="/locations/:id" components={LocationsInformation} />
-          <Route exact path="/reviews" components={Reviews} />
+          <Route exact path="/reviews" components={ReviewsInformation} />
           
         
           
