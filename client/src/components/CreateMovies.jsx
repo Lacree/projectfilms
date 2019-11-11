@@ -39,7 +39,7 @@ export default class CreateMovies extends Component {
             <div>
                 <form onSubmit={this.addNewMovie} >
 
-                    {this.state.redirect ? (<Redirect to={`/movie${this.state.createdPainterId}`} />) : null}
+                    {this.state.redirect ? (<Redirect to={`/movie${this.state.createdMovieId}`} />) : null}
 
                     <div>
                         <input

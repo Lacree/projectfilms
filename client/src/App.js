@@ -16,18 +16,22 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Switch>
-          <Route exact path="/movies/" components={Movies} />
-          <Route exact path="/movies/:id" components={MoviesInformation} />
-          <Route exact path="/locations" components={Locations} />
-          <Route exact path="/locations/:id" components={LocationsInformation} />
-          <Route exact path="/reviews/" components={Reviews} />
-          <Route exact path="/reviews/:id" components={ReviewsInformation} />
-          <Route exact path="/movie/new" components={CreateMovies} />
-          <Route exact path="/location/new" components={CreateLocations} />
-          <Route exact path="/review/new" components={CreateReviews} />
-          
+          <Route exact path="/">
+            <Header />
+          </Route>
+          <Route exact path="/movies/" component={Movies} />
+          <Route exact path="/movies/:id" component={MoviesInformation} />
+          <Route exact path="/locations" component={Locations} />
+          <Route exact path="/locations/:id" component={LocationsInformation} />
+          <Route exact path="/reviews" >
+            <Reviews />
+          </Route>
+          <Route exact path="/reviews/:id" component={ReviewsInformation} />
+          <Route exact path="/movie/new" component={CreateMovies} />
+          <Route exact path="/location/new" component={CreateLocations} />
+          <Route exact path="/review/new" component={CreateReviews} />
+
         </Switch>
       </Router>
     </div>

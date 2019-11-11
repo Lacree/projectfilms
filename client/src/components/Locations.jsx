@@ -23,6 +23,7 @@ export default class Locations extends Component {
                         </div>
                     )
                 })}
+                <Link to='/'>Back</Link>
             </div>
         )
     }

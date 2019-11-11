@@ -14,11 +14,9 @@ export default class CreateLocations extends Component {
     }
     handleNewLocation = (event) => {
         const attributeName = event.target.name;
-        const attributeValue = event.target.attributeValue;
-
+        const attributeValue = event.target.value;
         const newLocation = { ...this.state.newLocation };
         newLocation[attributeName] = attributeValue;
-
         this.setState({ newLocation })
     }
 
@@ -43,13 +41,15 @@ export default class CreateLocations extends Component {
         return (
             <div>
                 <form onSubmit={this.addNewLocation} >
+
                     {this.state.redirect ? (<Redirect to={`/location${this.state.createdLocationId}`} />) : null}
 
                     <div>
                         <input
                             type='text'
-                            name='newStreetName'
+                            name='street'
                             required='required'
+                            placeholder='StreetName'
                             value={this.state.newLocation.street}
                             onChange={this.handleNewLocation}
                         />
@@ -57,8 +57,9 @@ export default class CreateLocations extends Component {
                     <div>
                         <input
                             type='text'
-                            name='newCityName'
+                            name='city'
                             required='required'
+                            placeholder='City'
                             value={this.state.newLocation.city}
                             onChange={this.handleNewLocation}
                         />

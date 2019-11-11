@@ -26,6 +26,7 @@ export default class Reviews extends Component {
                     )
                    
                 })}
+                <Link to='/'>Back</Link>
             </div>
         )
     }

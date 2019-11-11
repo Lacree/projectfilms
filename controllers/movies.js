@@ -14,7 +14,7 @@ movieRouter.get('/', (req, res) => {
 
 //getOne
 movieRouter.get('/:id', (req, res) => {
-    MovieApi.getOneMovie(req.params.id)
+    MovieApi.getSingleMovie(req.params.id)
         .then((singleMovie) => {
             res.json(singleMovie)
         })

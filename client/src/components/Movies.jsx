@@ -24,10 +24,12 @@ export default class Movies extends Component {
                 {this.state.movies.map((movie) => {
                     return (
                         <div key={movie._id}>
-                            <Link to={"/movies/" + movie._id}><h5>{movie.name}</h5></Link>
+                            <Link to={`/movies/${movie._id}`}><h5>{movie.name}</h5></Link>
+
                         </div>
                     )
                 })}
+                <Link to='/'>Back</Link>
             </div>
         )
     }

@@ -6,31 +6,31 @@ const MoviesSchema = new mongoose.Schema({
     releaseYear: Number
 })
 
-const MoviesCollection = mongoose.model('Movie', MoviesSchema)
+const MovieCollection = mongoose.model('Movie', MoviesSchema)
 
 //getAllMovies
 const getAllMovies = () => {
-    return MoviesCollection.find({})
+    return MovieCollection.find({})
 }
 
 //getOneMovie
 const getSingleMovie = (id) => {
-    return MoviesCollection.findById(id)
+    return MovieCollection.findById(id)
 }
 
 //createMovie
 const createMovie = (movieData) => {
-    return MoviesCollection.create(movieData)
+    return MovieCollection.create(movieData)
 }
 
 //updateMovies
 const updateMovies = (id, movieData) => {
-    return MoviesCollection.updateOne({ _id: id }, movieData)
+    return MovieCollection.updateOne({ _id: id }, movieData)
 }
 
 //deleteMovies
 const deleteMovie = (id) => {
-    return MoviesCollection.deleteOne({ _id: id })
+    return MovieCollection.deleteOne({ _id: id })
 }
 
 module.exports = {
