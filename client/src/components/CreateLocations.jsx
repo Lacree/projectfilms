@@ -32,10 +32,7 @@ export default class CreateLocations extends Component {
             })
     }
 
-
-
-
-
+    
 
     render() {
         return (
@@ -48,7 +45,6 @@ export default class CreateLocations extends Component {
                         <input
                             type='text'
                             name='street'
-                            required='required'
                             placeholder='StreetName'
                             value={this.state.newLocation.street}
                             onChange={this.handleNewLocation}
@@ -56,17 +52,16 @@ export default class CreateLocations extends Component {
                     </div>
                     <div>
                         <input
-                            type='text'
                             name='city'
-                            required='required'
+                            type='text'
                             placeholder='City'
                             value={this.state.newLocation.city}
                             onChange={this.handleNewLocation}
                         />
                         <div>
                             <input
-                                type='Submit'
-                                value='Create New Location'
+                                type="Submit"
+                                value="Create New Location"
                             />
                         </div>
                     </div>

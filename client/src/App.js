@@ -22,9 +22,9 @@ function App() {
           </Route>
           <Route exact path="/movies/" component={Movies} />
           <Route exact path="/movies/:id" component={MoviesInformation} />
-          <Route exact path="/locations" component={Locations} />
+          <Route exact path="/locations/" component={Locations} />
           <Route exact path="/locations/:id" component={LocationsInformation} />
-          <Route exact path="/reviews" >
+          <Route exact path="/reviews/" >
             <Reviews />
           </Route>
           <Route exact path="/reviews/:id" component={ReviewsInformation} />
