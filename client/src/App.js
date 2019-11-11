@@ -8,6 +8,9 @@ import Header from './components/Header';
 import LocationsInformation from "./components/LocationsInformation";
 import MoviesInformation from "./components/MoviesInformation";
 import ReviewsInformation from "./components/ReviewsInformation";
+import CreateLocations from './components/CreateLocations';
+import CreateMovies from './components/CreateMovies';
+
 
 
 
@@ -25,8 +28,10 @@ function App() {
           <Route exact path="/movies/:id" components={MoviesInformation} />
           <Route exact path="/locations" components={Locations} />
           <Route exact path="/locations/:id" components={LocationsInformation} />
-          <Route exact path="/reviews" components={ReviewsInformation} />
           <Route exact path="/reviews" components={Reviews} />
+          <Route exact path="/reviews" components={ReviewsInformation} />
+          <Route exact path="/movie/new" components={CreateMovies} />
+          <Route exact path="/location/new" components={CreateLocations} />
           
         
           

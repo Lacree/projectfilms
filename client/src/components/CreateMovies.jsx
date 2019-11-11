@@ -26,7 +26,7 @@ export default class CreateMovies extends Component {
         evt.preventDefault();
 
         axios.get('/api/movie', this.state.newMovie)
-            .then(createdMovieId => {
+            .then(createdMovie => {
                 const newState = { ...this.state }
                 newState.createdMovieId = createdMovie._id
                 newState.redirect = true
