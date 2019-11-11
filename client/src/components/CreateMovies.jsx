@@ -18,7 +18,7 @@ export default class CreateMovies extends Component {
         const attributeName = evt.target.name;
         const attributeValue = evt.target.value;
         const newMovie = { ...this.state.newMovie };
-        newMovie[attributeName] = attributeValue; \
+        newMovie[attributeName] = attributeValue; 
         this.setState({ newMovie })
     }
 
