@@ -8,7 +8,7 @@ export default class MoviesInformation extends Component {
     }
 
     deleteMovie = () =>{
-        axios.delete('/api/movie/' + this.props.maych.params.id)
+        axios.delete('/api/movie/' + this.props.match.params.id)
             .then((response) =>{
                 this.setState({ deleted: true})
                 console.log(response)
@@ -16,7 +16,7 @@ export default class MoviesInformation extends Component {
     }
 
     componentDidMount = () =>{
-        axios.get('/api/movie' + this.props.match.params.id)
+        axios.get('/api/movie/' + this.props.match.params.id)
             .then((response) =>{
                 this.setState({ movie: response.data })
                 console.log(this.state)

@@ -8,24 +8,24 @@ export default class CreateMovies extends Component {
     state = {
         redirect: false,
         newMovie: {
-            name: '',
-            genre: '',
-            releaseYear: ''
+            name: "",
+            genre: "",
+            releaseYear: ""
         },
         createdMovieId: null
     }
-    handelNewMovie = (evt) => {
-        const attributeName = evt.target.name;
-        const attributeValue = evt.target.value;
+    handelNewMovie = (event) => {
+        const attributeName = event.target.name;
+        const attributeValue = event.target.value;
         const newMovie = { ...this.state.newMovie };
         newMovie[attributeName] = attributeValue; 
         this.setState({ newMovie })
     }
 
-    addNewMovie = (evt) => {
-        evt.preventDefault();
+    addNewMovie = (event) => {
+        event.preventDefault();
 
-        axios.get('/api/movie', this.state.newMovie)
+        axios.post('/api/movie', this.state.newMovie)
             .then(createdMovie => {
                 const newState = { ...this.state }
                 newState.createdMovieId = createdMovie._id
@@ -39,7 +39,7 @@ export default class CreateMovies extends Component {
             <div>
                 <form onSubmit={this.addNewMovie} >
 
-                    {this.state.redirect ? (<Redirect to={`/movies${this.state.createdPainterId}`} />) : null}
+                    {this.state.redirect ? (<Redirect to={`/movie${this.state.createdPainterId}`} />) : null}
 
                     <div>
                         <input
@@ -57,6 +57,7 @@ export default class CreateMovies extends Component {
                             placeholder='genre'
                             value={this.state.newMovie.genre}
                             onChange={this.handelNewMovie}
+                            
                         />
                     </div>
                     <div>
@@ -66,6 +67,13 @@ export default class CreateMovies extends Component {
                             placeholder='releaseYear'
                             value={this.state.newMovie.releaseYear}
                             onChange={this.handelNewMovie}
+                            
+                        />
+                    </div>
+                    <div>
+                    <input 
+                        type="submit"
+                        value="Create  New Movie"
                         />
                     </div>
                 </form>

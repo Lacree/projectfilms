@@ -6,7 +6,7 @@ const MoviesSchema = new mongoose.Schema({
     releaseYear: Number
 })
 
-const MoviesCollection = mongoose.model('movie', MoviesSchema)
+const MoviesCollection = mongoose.model('Movie', MoviesSchema)
 
 //getAllMovies
 const getAllMovies = () => {
@@ -14,7 +14,7 @@ const getAllMovies = () => {
 }
 
 //getOneMovie
-const getOneMovie = (id) => {
+const getSingleMovie = (id) => {
     return MoviesCollection.findById(id)
 }
 
@@ -35,7 +35,7 @@ const deleteMovie = (id) => {
 
 module.exports = {
     getAllMovies,
-    getOneMovie,
+    getSingleMovie,
     createMovie,
     updateMovies,
     deleteMovie

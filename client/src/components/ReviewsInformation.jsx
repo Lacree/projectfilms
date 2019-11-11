@@ -40,7 +40,7 @@ export default class ReviewsInformation extends Component {
                     <h5>star: {this.state.review.star}</h5>
                     <h5>review: {this.state.review.review}</h5>
 
-                    <button onClick={this.deleteReview}> Deleted </button>
+                    <button onClick={this.deleteReview}> Delete </button>
                 </div>
             )
         }

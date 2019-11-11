@@ -12,9 +12,9 @@ export default class CreateLocations extends Component {
         },
         createdLocationId: null
     }
-    handleNewLocation = (evt) => {
-        const attributeName = evt.target.name;
-        const attributeValue = evt.target.attributeValue;
+    handleNewLocation = (event) => {
+        const attributeName = event.target.name;
+        const attributeValue = event.target.attributeValue;
 
         const newLocation = { ...this.state.newLocation };
         newLocation[attributeName] = attributeValue;
@@ -22,17 +22,22 @@ export default class CreateLocations extends Component {
         this.setState({ newLocation })
     }
 
-    addNewLocation = (evt) => {
-        evt.preventDefualt();
+    addNewLocation = (event) => {
+        event.preventDefualt();
 
         axios.post('/api/location', this.state.newLocation)
-            .then((createLocation) => {
+            .then(createdLocation => {
                 const newState = { ...this.state }
-                newState.createdLocationId = createLocation._id
+                newState.createdLocationId = createdLocation._id
                 newState.redirect = true
                 this.setState(newState)
             })
     }
+
+
+
+
+
 
     render() {
         return (
@@ -46,6 +51,7 @@ export default class CreateLocations extends Component {
                             name='newStreetName'
                             required='required'
                             value={this.state.newLocation.street}
+                            onChange={this.handleNewLocation}
                         />
                     </div>
                     <div>
@@ -54,11 +60,12 @@ export default class CreateLocations extends Component {
                             name='newCityName'
                             required='required'
                             value={this.state.newLocation.city}
+                            onChange={this.handleNewLocation}
                         />
                         <div>
                             <input
                                 type='Submit'
-                                value='Create Location'
+                                value='Create New Location'
                             />
                         </div>
                     </div>

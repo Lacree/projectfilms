@@ -40,7 +40,7 @@ export default class LocationsInformation extends Component {
                     <h5>street: {this.state.location.street}</h5>
                     <h5>city: {this.state.location.city}</h5>
 
-                    <button onClick={this.deleteLocation}> Deleted </button>
+                    <button onClick={this.deleteLocation}> Delete </button>
                 </div>
             )
         }
