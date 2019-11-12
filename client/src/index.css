@@ -1,5 +1,6 @@
 body {
   margin: auto;
+  padding: 40px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,4 +14,17 @@ code {
     monospace;
 }
 
+h1{
+color: teal;
+}
 
+div{
+background-image: url(https://motionarray.imgix.net/preview-86762-6dicuHGhCw-high_0014.jpg);
+background-size: contain;
+border-radius: 30%;
+padding: 20px;
+
+
+
+
+}
