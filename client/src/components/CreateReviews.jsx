@@ -7,23 +7,23 @@ export default class CreateReviews extends Component {
     state = {
         redirect: false,
         newReview: {
-            stars: '',
-            review: ''
+            stars: "",
+            review: ""
         },
         createdReviewId: null
     }
-    handleNewReview = (event) => {
+
+    handelNewReview = (event) => {
         const attributeName = event.target.name;
         const attributeValue = event.target.value;
-
         const newReview = { ...this.state.newReview };
         newReview[attributeName] = attributeValue;
-
         this.setState({ newReview })
     }
 
+
     addNewReview = (event) => {
-        event.preventDefualt();
+        event.preventDefault()
 
         axios.post('/api/review', this.state.newReview)
             .then(createdReview => {
@@ -37,32 +37,32 @@ export default class CreateReviews extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.addNewReview} >
-                    {this.state.redirect ? (<Redirect to={`/review${this.state.createdReviewId}`} />) : null}
+                <form onSubmit={this.addNewReview}>
+                    {this.state.redirect ? (<Redirect to={'/reviews'} />) : null}
 
                     <div>
                         <input
+                            name='stars'
                             type='text'
-                            name='newStarRating'
-                            required='required'
+                            placeholder='Star rating'
                             value={this.state.newReview.stars}
-                            onChange={this.handleNewReview}
+                            onChange={this.handelNewReview}
                         />
                     </div>
                     <div>
                         <input
+                            name='review'
                             type='text'
-                            name='newReview'
-                            required='required'
+                            placeholder='Review'
                             value={this.state.newReview.review}
-                            onChange={this.handleNewReview}
+                            onChange={this.handelNewReview}
                         />
-                        <div>
-                            <input
-                                type='Submit'
-                                value='Create New Review'
-                            />
-                        </div>
+                    </div>
+                    <div>
+                        <input
+                            type='submit'
+                            value='Create New Review'
+                        />
                     </div>
                 </form>
             </div>

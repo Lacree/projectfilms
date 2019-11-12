@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios"
+import { Link } from 'react-router-dom'
 
 export default class LocationsInformation extends Component {
 
@@ -41,6 +42,9 @@ export default class LocationsInformation extends Component {
                     <h5>city: {this.state.location.city}</h5>
 
                     <button onClick={this.deleteLocation}> Delete </button>
+                    <button>
+                    <Link to='/'>Back</Link>
+                    </button>
                 </div>
             )
         }

@@ -18,7 +18,7 @@ export default class CreateMovies extends Component {
         const attributeName = event.target.name;
         const attributeValue = event.target.value;
         const newMovie = { ...this.state.newMovie };
-        newMovie[attributeName] = attributeValue; 
+        newMovie[attributeName] = attributeValue;
         this.setState({ newMovie })
     }
 
@@ -39,7 +39,7 @@ export default class CreateMovies extends Component {
             <div>
                 <form onSubmit={this.addNewMovie} >
 
-                    {this.state.redirect ? (<Redirect to={`/movie${this.state.createdMovieId}`} />) : null}
+                    {this.state.redirect ? (<Redirect to={`/movies`} />) : null}
 
                     <div>
                         <input
@@ -57,7 +57,7 @@ export default class CreateMovies extends Component {
                             placeholder='genre'
                             value={this.state.newMovie.genre}
                             onChange={this.handelNewMovie}
-                            
+
                         />
                     </div>
                     <div>
@@ -67,13 +67,13 @@ export default class CreateMovies extends Component {
                             placeholder='releaseYear'
                             value={this.state.newMovie.releaseYear}
                             onChange={this.handelNewMovie}
-                            
+
                         />
                     </div>
                     <div>
-                    <input 
-                        type="submit"
-                        value="Create  New Movie"
+                        <input
+                            type="submit"
+                            value="Create  New Movie"
                         />
                     </div>
                 </form>

@@ -20,8 +20,9 @@ export default class CreateLocations extends Component {
         this.setState({ newLocation })
     }
 
+
     addNewLocation = (event) => {
-        event.preventDefualt();
+        event.preventDefault();
 
         axios.post('/api/location', this.state.newLocation)
             .then(createdLocation => {
@@ -32,19 +33,19 @@ export default class CreateLocations extends Component {
             })
     }
 
-    
+
 
     render() {
         return (
             <div>
                 <form onSubmit={this.addNewLocation} >
 
-                    {this.state.redirect ? (<Redirect to={`/location${this.state.createdLocationId}`} />) : null}
+                    {this.state.redirect ? (<Redirect to={`/locations`} />) : null}
 
                     <div>
                         <input
-                            type='text'
                             name='street'
+                            type='text'
                             placeholder='StreetName'
                             value={this.state.newLocation.street}
                             onChange={this.handleNewLocation}
@@ -58,14 +59,15 @@ export default class CreateLocations extends Component {
                             value={this.state.newLocation.city}
                             onChange={this.handleNewLocation}
                         />
-                        <div>
-                            <input
-                                type="Submit"
-                                value="Create New Location"
-                            />
-                        </div>
+                    </div>
+                    <div>
+                        <input
+                            type="submit"
+                            value="Create New Location"
+                        />
                     </div>
                 </form>
+
             </div>
         )
     }

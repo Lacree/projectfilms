@@ -24,9 +24,7 @@ function App() {
           <Route exact path="/movies/:id" component={MoviesInformation} />
           <Route exact path="/locations/" component={Locations} />
           <Route exact path="/locations/:id" component={LocationsInformation} />
-          <Route exact path="/reviews/" >
-            <Reviews />
-          </Route>
+          <Route exact path="/reviews" component={Reviews} />
           <Route exact path="/reviews/:id" component={ReviewsInformation} />
           <Route exact path="/movie/new" component={CreateMovies} />
           <Route exact path="/location/new" component={CreateLocations} />

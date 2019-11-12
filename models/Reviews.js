@@ -1,9 +1,8 @@
 const mongoose = require('./connections.js')
 
 const ReviewsSchema = new mongoose.Schema({
-    name: String,
-   stars: Number,
-   review: String
+    stars: String,
+    review: String
 })
 
 const ReviewsCollection = mongoose.model('review', ReviewsSchema)
@@ -30,7 +29,7 @@ const updateReviews = (id, reviewData) => {
 
 //deleteReviews
 const deleteReview = (id) => {
-    return ReviewsCollection.deleteOne({_id: id })
+    return ReviewsCollection.deleteOne({ _id: id })
 }
 
 module.exports = {
