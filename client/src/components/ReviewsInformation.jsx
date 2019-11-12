@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios"
+import {Link} from 'react-router-dom'
 
 export default class ReviewsInformation extends Component {
 
@@ -41,6 +42,9 @@ export default class ReviewsInformation extends Component {
                     <h5>review: {this.state.review.review}</h5>
 
                     <button onClick={this.deleteReview}> Delete </button>
+                    <button>
+                    <Link to='/'>Back</Link>
+                    </button>
                 </div>
             )
         }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 
 export default class MoviesInformation extends Component {
@@ -39,6 +40,10 @@ export default class MoviesInformation extends Component {
                     <h5>releaseYear: {this.state.movie.releaseYear}</h5>
 
                     <button onClick={this.deleteMovie}>Deleted</button>
+                    <button>
+                    <Link to='/'>Back</Link>
+                    </button>
+                    
                 </div>
             )
         }
