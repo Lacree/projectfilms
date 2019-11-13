@@ -38,7 +38,6 @@ export default class MoviesInformation extends Component {
                     <h5>name: {this.state.movie.name}</h5>
                     <h5>genre: {this.state.movie.genre}</h5>
                     <h5>releaseYear: {this.state.movie.releaseYear}</h5>
-
                     <button onClick={this.deleteMovie}>Deleted</button>
                     <button>
                     <Link to='/'>Back</Link>

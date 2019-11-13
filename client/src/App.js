@@ -12,6 +12,7 @@ import MoviesInformation from "./components/MoviesInformation";
 import LocationsInformation from "./components/LocationsInformation";
 import ReviewsInformation from "./components/ReviewsInformation"
 
+
 function App() {
   return (
     <div className="App">
@@ -29,7 +30,7 @@ function App() {
           <Route exact path="/movie/new" component={CreateMovies} />
           <Route exact path="/location/new" component={CreateLocations} />
           <Route exact path="/review/new" component={CreateReviews} />
-
+        
         </Switch>
       </Router>
     </div>
